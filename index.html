@@ -1,597 +1,689 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
 
-  <title>
-    EFHC Solar Books — Солнечные электростанции
-  </title>
+<meta charset="UTF-8">
 
-  <meta
-    name="description"
-    content="
-    Бесплатные инженерные книги EFHC
-    по солнечной энергетике,
-    солнечным электростанциям,
-    BESS, инверторам,
-    аккумуляторам и photovoltaics.
-    "
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
 
-  <meta
-    name="keywords"
-    content="
-    solar energy,
-    solar power,
-    photovoltaics,
-    solar engineering,
-    BESS,
-    renewable energy,
-    EFHC,
-    солнечные электростанции,
-    сонячні електростанції
-    "
-  >
+<title>
+EFHC Solar Books
+</title>
 
-  <style>
+<meta
+  name="description"
+  content="
+  Бесплатные инженерные книги
+  по солнечной энергетике,
+  солнечным электростанциям,
+  BESS, photovoltaics,
+  инверторам,
+  аккумуляторам,
+  монтажу и экономике СЭС.
+  "
+>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<meta
+  name="keywords"
+  content="
+  solar energy,
+  photovoltaics,
+  renewable energy,
+  BESS,
+  energy storage,
+  solar engineering,
+  EFHC,
+  солнечные электростанции,
+  сонячні електростанції
+  "
+>
 
-    body{
-      background:#07130f;
-      color:#f5f5f5;
-      font-family:
-        Inter,
-        Arial,
-        sans-serif;
-      line-height:1.6;
-    }
+<style>
 
-    a{
-      text-decoration:none;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .container{
-      width:min(1200px,92%);
-      margin:auto;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .hero{
-      padding:
-        80px
-        0
-        60px;
-      text-align:center;
-    }
+body{
 
-    .logo{
-      width:220px;
-      max-width:90%;
-      margin-bottom:30px;
-    }
+  background:
+    linear-gradient(
+      180deg,
+      #06110d 0%,
+      #0b1d17 100%
+    );
 
-    .title{
-      font-size:clamp(
-        2.2rem,
-        6vw,
-        5rem
-      );
-      font-weight:800;
-      line-height:1.1;
-      margin-bottom:24px;
-    }
+  color:#f5f5f5;
 
-    .subtitle{
-      font-size:1.2rem;
-      color:#c8d5cf;
-      max-width:900px;
-      margin:
-        0 auto 40px;
-    }
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
 
-    .badges{
-      display:flex;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-bottom:50px;
-    }
+  line-height:1.6;
 
-    .badge{
-      background:#0f2a21;
-      border:
-        1px solid
-        #1f4f3f;
-      padding:
-        12px 18px;
-      border-radius:999px;
-      font-size:.95rem;
-      color:#d8fce8;
-    }
+  overflow-x:hidden;
+}
 
-    .buttons{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:18px;
-      margin-bottom:70px;
-    }
+a{
+  text-decoration:none;
+}
 
-    .btn{
-      padding:
-        16px 28px;
-      border-radius:16px;
-      font-weight:700;
-      transition:.2s;
-      display:inline-block;
-    }
+.container{
+  width:min(1300px,94%);
+  margin:auto;
+}
 
-    .btn:hover{
-      transform:
-        translateY(-2px);
-    }
+.hero{
 
-    .btn-blue{
-      background:#2563eb;
-      color:white;
-    }
+  padding:
+    0
+    0
+    90px;
+}
 
-    .btn-green{
-      background:#16a34a;
-      color:white;
-    }
+.logo{
 
-    .btn-dark{
-      background:#111827;
-      color:white;
-      border:
-        1px solid
-        #374151;
-    }
+  width:100%;
+  max-width:1600px;
 
-    .section{
-      padding:
-        60px
-        0;
-    }
+  display:block;
 
-    .section-title{
-      text-align:center;
-      font-size:2.3rem;
-      margin-bottom:50px;
-      font-weight:800;
-    }
+  margin:
+    0 auto
+    40px;
 
-    .cards{
-      display:grid;
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(280px,1fr)
-        );
-      gap:24px;
-    }
+  object-fit:contain;
+}
 
-    .card{
-      background:#0d1d18;
-      border:
-        1px solid
-        #183126;
-      border-radius:24px;
-      padding:28px;
-    }
+.hero-content{
+  text-align:center;
+}
 
-    .card h3{
-      margin-bottom:18px;
-      font-size:1.4rem;
-    }
+.title{
 
-    .card ul{
-      padding-left:20px;
-    }
+  font-size:
+    clamp(
+      2.5rem,
+      7vw,
+      6rem
+    );
 
-    .card li{
-      margin-bottom:10px;
-      color:#d5dfda;
-    }
+  font-weight:900;
 
-    .books{
-      display:grid;
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(320px,1fr)
-        );
-      gap:30px;
-    }
+  line-height:1.05;
 
-    .book{
-      background:#0c1915;
-      border:
-        1px solid
-        #1b3a2d;
-      border-radius:30px;
-      padding:36px;
-      text-align:center;
-    }
+  margin-bottom:26px;
+}
 
-    .book h3{
-      font-size:2rem;
-      margin-bottom:20px;
-    }
+.subtitle{
 
-    .book p{
-      color:#c7d2cc;
-      margin-bottom:28px;
-    }
+  max-width:1000px;
 
-    .footer{
-      padding:
-        80px
-        0
-        40px;
-      text-align:center;
-      color:#9ca3af;
-    }
+  margin:
+    0 auto 36px;
 
-    .formula{
-      font-size:1.4rem;
-      font-weight:800;
-      color:#facc15;
-      margin:
-        24px
-        0;
-    }
+  font-size:1.2rem;
 
-  </style>
+  color:#cad7d0;
+}
+
+.energy{
+
+  display:inline-block;
+
+  background:
+    rgba(255,255,255,.06);
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  padding:
+    16px
+    30px;
+
+  border-radius:999px;
+
+  margin-bottom:60px;
+
+  font-weight:800;
+
+  color:#facc15;
+
+  font-size:1.05rem;
+}
+
+.books{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(340px,1fr)
+    );
+
+  gap:34px;
+}
+
+.book{
+
+  background:
+    rgba(255,255,255,.05);
+
+  backdrop-filter:
+    blur(16px);
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-radius:34px;
+
+  padding:38px;
+
+  transition:.25s;
+}
+
+.book:hover{
+
+  transform:
+    translateY(-8px);
+
+  border:
+    1px solid
+    rgba(255,255,255,.16);
+}
+
+.flag{
+  font-size:2rem;
+  margin-bottom:18px;
+}
+
+.book-title{
+
+  font-size:2.1rem;
+
+  font-weight:900;
+
+  margin-bottom:20px;
+}
+
+.book-text{
+
+  color:#d0d8d3;
+
+  margin-bottom:30px;
+}
+
+.book-list{
+
+  padding-left:22px;
+
+  margin-bottom:36px;
+}
+
+.book-list li{
+
+  margin-bottom:12px;
+
+  color:#e1e7e3;
+}
+
+.buttons{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+}
+
+.btn{
+
+  display:block;
+
+  text-align:center;
+
+  padding:
+    17px
+    24px;
+
+  border-radius:18px;
+
+  font-weight:800;
+
+  transition:.2s;
+}
+
+.btn:hover{
+
+  transform:
+    translateY(-2px);
+}
+
+.btn-blue{
+
+  background:#2563eb;
+
+  color:white;
+}
+
+.btn-green{
+
+  background:#16a34a;
+
+  color:white;
+}
+
+.btn-dark{
+
+  background:#111827;
+
+  color:white;
+
+  border:
+    1px solid
+    #374151;
+}
+
+.section{
+
+  padding:
+    90px
+    0;
+}
+
+.section-title{
+
+  text-align:center;
+
+  font-size:2.6rem;
+
+  margin-bottom:30px;
+
+  font-weight:900;
+}
+
+.section-text{
+
+  max-width:1000px;
+
+  margin:auto;
+
+  text-align:center;
+
+  color:#c7d2cb;
+
+  font-size:1.15rem;
+}
+
+.features{
+
+  margin-top:60px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(260px,1fr)
+    );
+
+  gap:24px;
+}
+
+.feature{
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid
+    rgba(255,255,255,.07);
+
+  border-radius:24px;
+
+  padding:28px;
+}
+
+.feature h3{
+
+  margin-bottom:16px;
+
+  font-size:1.3rem;
+}
+
+.feature p{
+
+  color:#d2dbd6;
+}
+
+.footer{
+
+  padding:
+    80px
+    0
+    40px;
+
+  text-align:center;
+
+  color:#9ca3af;
+}
+
+.footer strong{
+
+  color:#facc15;
+}
+
+@media(max-width:768px){
+
+  .book{
+    padding:30px;
+  }
+
+  .title{
+    font-size:3rem;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="container">
+<section class="hero">
 
-      <img
-        src="assets/efhc_logo.svg"
-        alt="EFHC"
-        class="logo"
-      >
+<div class="container">
 
-      <h1 class="title">
-        EFHC Solar Books
-      </h1>
+<img
+  src="assets/efhc_logo.svg"
+  alt="EFHC Logo"
+  class="logo"
+>
 
-      <p class="subtitle">
-        Бесплатные инженерные книги
-        по солнечной энергетике,
-        солнечным электростанциям,
-        BESS, photovoltaics,
-        инверторам,
-        аккумуляторам,
-        проектированию,
-        монтажу и экономике СЭС.
-      </p>
+<div class="hero-content">
 
-      <div class="badges">
+<h1 class="title">
+EFHC Solar Books
+</h1>
 
-        <div class="badge">
-          Solar Energy
-        </div>
+<p class="subtitle">
 
-        <div class="badge">
-          Renewable Energy
-        </div>
+Бесплатные инженерные книги
+по солнечной энергетике,
+солнечным электростанциям,
+BESS,
+photovoltaics,
+инверторам,
+аккумуляторам,
+монтажу,
+проектированию
+и экономике СЭС.
 
-        <div class="badge">
-          BESS
-        </div>
+</p>
 
-        <div class="badge">
-          Energy Storage
-        </div>
+<div class="energy">
 
-        <div class="badge">
-          Photovoltaics
-        </div>
+⚡ 1 EFHC = 1 кВт·ч
+&nbsp;&nbsp;&nbsp;
+⚡ 1 EFHC = 1 кВт·год
 
-        <div class="badge">
-          EFHC
-        </div>
+</div>
 
-      </div>
+<div class="books">
 
-      <div class="buttons">
+<div class="book">
 
-        <a
-          class="btn btn-blue"
-          href="
-          https://github.com/
-          EFHC-Token/SES/raw/main/
-          %D0%A1%D0%BE%D0%BB%D0%BD%
-          D0%B5%D1%87%D0%BD%D1%8B%D0%
-          B5%20%D1%8D%D0%BB%D0%B5%D0%
-          BA%D1%82%D1%80%D0%BE%D1%81%
-          D1%82%D0%B0%D0%BD%D1%86%D0%
-          B8%D0%B8.pdf
-          "
-        >
-          📥 Скачать RU PDF
-        </a>
+<div class="flag">
+🇷🇺
+</div>
 
-        <a
-          class="btn btn-green"
-          href="
-          https://github.com/
-          EFHC-Token/SES/raw/main/
-          %D0%A1%D0%BE%D0%BD%D1%8F%D1%
-          87%D0%BD%D1%96%20%D0%B5%D0%
-          BB%D0%B5%D0%BA%D1%82%D1%80%
-          D0%BE%D1%81%D1%82%D0%B0%D0%
-          BD%D1%86%D1%96%D1%97.pdf
-          "
-        >
-          📥 Завантажити UA PDF
-        </a>
+<h2 class="book-title">
+Солнечные электростанции
+</h2>
 
-        <a
-          class="btn btn-dark"
-          href="docs/ru/"
-        >
-          📖 Открыть Docs
-        </a>
+<p class="book-text">
 
-      </div>
+Практическое инженерное руководство EFHC
+по солнечной энергетике.
 
-    </div>
-  </section>
+</p>
 
-  <section class="section">
-    <div class="container">
+<ul class="book-list">
 
-      <h2 class="section-title">
-        Что внутри
-      </h2>
+<li>Солнечные электростанции</li>
+<li>Фотомодули</li>
+<li>Инверторы</li>
+<li>MPPT и стринги</li>
+<li>BESS и накопители энергии</li>
+<li>Монтаж СЭС</li>
+<li>Экономика и окупаемость</li>
 
-      <div class="cards">
+</ul>
 
-        <div class="card">
-          <h3>
-            ☀️ Solar Energy
-          </h3>
+<div class="buttons">
 
-          <ul>
-            <li>
-              солнечные электростанции
-            </li>
-            <li>
-              генерация
-            </li>
-            <li>
-              photovoltaics
-            </li>
-            <li>
-              renewable energy
-            </li>
-          </ul>
-        </div>
+<a
+  href="./Солнечные%20электростанции.pdf"
+  class="btn btn-blue"
+>
+📥 Скачать PDF
+</a>
 
-        <div class="card">
-          <h3>
-            🔋 BESS & Storage
-          </h3>
+<a
+  href="./docs/ru/"
+  class="btn btn-dark"
+>
+📖 Открыть документацию
+</a>
 
-          <ul>
-            <li>
-              BESS
-            </li>
-            <li>
-              energy storage
-            </li>
-            <li>
-              натрий-ионные батареи
-            </li>
-            <li>
-              резервное питание
-            </li>
-          </ul>
-        </div>
+</div>
 
-        <div class="card">
-          <h3>
-            ⚡ Engineering
-          </h3>
+</div>
 
-          <ul>
-            <li>
-              инверторы
-            </li>
-            <li>
-              MPPT
-            </li>
-            <li>
-              стринги
-            </li>
-            <li>
-              кабели и защита
-            </li>
-          </ul>
-        </div>
+<div class="book">
 
-        <div class="card">
-          <h3>
-            📈 Economics
-          </h3>
+<div class="flag">
+🇺🇦
+</div>
 
-          <ul>
-            <li>
-              окупаемость
-            </li>
-            <li>
-              CAPEX / OPEX
-            </li>
-            <li>
-              экономика СЭС
-            </li>
-            <li>
-              ROI
-            </li>
-          </ul>
-        </div>
+<h2 class="book-title">
+Сонячні електростанції
+</h2>
 
-      </div>
+<p class="book-text">
 
-    </div>
-  </section>
+Практичний інженерний посібник EFHC
+із сонячної енергетики.
 
-  <section class="section">
-    <div class="container">
+</p>
 
-      <h2 class="section-title">
-        Книги EFHC
-      </h2>
+<ul class="book-list">
 
-      <div class="books">
+<li>Сонячні електростанції</li>
+<li>Фотомодулі</li>
+<li>Інвертори</li>
+<li>MPPT і стринги</li>
+<li>BESS та накопичувачі</li>
+<li>Монтаж СЕС</li>
+<li>Економіка та окупність</li>
 
-        <div class="book">
+</ul>
 
-          <h3>
-            🇷🇺
-            Солнечные
-            электростанции
-          </h3>
+<div class="buttons">
 
-          <p>
-            Практическое инженерное
-            руководство EFHC
-            по солнечной энергетике.
-          </p>
+<a
+  href="./Сонячні%20електростанції.pdf"
+  class="btn btn-green"
+>
+📥 Завантажити PDF
+</a>
 
-          <a
-            class="btn btn-blue"
-            href="
-            https://github.com/
-            EFHC-Token/SES/raw/main/
-            %D0%A1%D0%BE%D0%BB%D0%BD%
-            D0%B5%D1%87%D0%BD%D1%8B%D0%
-            B5%20%D1%8D%D0%BB%D0%B5%D0%
-            BA%D1%82%D1%80%D0%BE%D1%81%
-            D1%82%D0%B0%D0%BD%D1%86%D0%
-            B8%D0%B8.pdf
-            "
-          >
-            Скачать PDF
-          </a>
+<a
+  href="./docs/ua/"
+  class="btn btn-dark"
+>
+📖 Відкрити документацію
+</a>
 
-        </div>
+</div>
 
-        <div class="book">
+</div>
 
-          <h3>
-            🇺🇦
-            Сонячні
-            електростанції
-          </h3>
+</div>
 
-          <p>
-            Практичний інженерний
-            посібник EFHC
-            із сонячної енергетики.
-          </p>
+</div>
 
-          <a
-            class="btn btn-green"
-            href="
-            https://github.com/
-            EFHC-Token/SES/raw/main/
-            %D0%A1%D0%BE%D0%BD%D1%8F%D1%
-            87%D0%BD%D1%96%20%D0%B5%D0%
-            BB%D0%B5%D0%BA%D1%82%D1%80%
-            D0%BE%D1%81%D1%82%D0%B0%D0%
-            BD%D1%86%D1%96%D1%97.pdf
-            "
-          >
-            Завантажити PDF
-          </a>
+</div>
 
-        </div>
+</section>
 
-      </div>
+<section class="section">
 
-    </div>
-  </section>
+<div class="container">
 
-  <section class="section">
-    <div class="container">
+<h2 class="section-title">
+Для людей, поисковых систем и AI
+</h2>
 
-      <h2 class="section-title">
-        AI / Search Layer
-      </h2>
+<p class="section-text">
 
-      <div class="cards">
+EFHC Solar Books —
+это открытая AI-readable библиотека
+по солнечной энергетике,
+BESS,
+photovoltaics
+и renewable energy.
 
-        <div class="card">
-          <h3>
-            🤖 AI-readable
-          </h3>
+Книги доступны
+в PDF и Markdown,
+что позволяет
+читать,
+искать,
+анализировать,
+цитировать
+и индексировать материалы
+без ограничений.
 
-          <ul>
-            <li>AI_INDEX.md</li>
-            <li>llms.txt</li>
-            <li>semantic metadata</li>
-            <li>Markdown docs</li>
-          </ul>
-        </div>
+</p>
 
-        <div class="card">
-          <h3>
-            🔎 SEO
-          </h3>
+<div class="features">
 
-          <ul>
-            <li>robots.txt</li>
-            <li>sitemap.xml</li>
-            <li>search phrases</li>
-            <li>semantic tags</li>
-          </ul>
-        </div>
+<div class="feature">
 
-      </div>
+<h3>
+☀️ Solar Energy
+</h3>
 
-    </div>
-  </section>
+<p>
 
-  <footer class="footer">
+Практические материалы
+по солнечным электростанциям,
+генерации
+и photovoltaics.
 
-    <div class="container">
+</p>
 
-      <div class="formula">
-        1 EFHC = 1 кВт·ч
-      </div>
+</div>
 
-      <div class="formula">
-        1 EFHC = 1 кВт·год
-      </div>
+<div class="feature">
 
-      <p>
-        EFHC — Energy for Humanity Coin
-      </p>
+<h3>
+🔋 BESS & Storage
+</h3>
 
-      <p>
-        Practical solar engineering
-        knowledge platform.
-      </p>
+<p>
 
-    </div>
+BESS,
+energy storage,
+натрий-ионные батареи
+и резервное питание.
 
-  </footer>
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>
+⚡ Engineering
+</h3>
+
+<p>
+
+Инверторы,
+MPPT,
+стринги,
+кабели,
+защита
+и монтаж.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>
+📈 Economics
+</h3>
+
+<p>
+
+Экономика СЭС,
+окупаемость,
+ROI,
+CAPEX/OPEX
+и контроль подрядчиков.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="container">
+
+<p>
+
+<strong>
+EFHC — Energy for Humanity Coin
+</strong>
+
+</p>
+
+<p>
+
+Практические знания
+о солнечной энергетике,
+доступные людям,
+поисковым системам
+и AI-системам.
+
+</p>
+
+</div>
+
+</footer>
 
 </body>
 </html>
