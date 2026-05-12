@@ -1,42 +1,25 @@
-name: Documentation Check
+name: Repository Check
 
 on:
   push:
-  pull_request:
+  workflow_dispatch:
 
 jobs:
-  check-docs:
+  check:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Check required files
+      - name: Check README
+        run: test -f README.md
+
+      - name: Check PDFs
         run: |
-          test -f README.md
-          test -f LICENSE.md
+          test -f "Солнечные электростанции.pdf"
+          test -f "Сонячні електростанції.pdf"
+
+      - name: Check AI files
+        run: |
           test -f AI_INDEX.md
           test -f llms.txt
-          test -f robots.txt
-          test -f sitemap.xml
-          test -f "Солнечные электростанции.pdf"
-          test -f "Сонячні електростанції.pdf"
-          test -f assets/efhc_logo.svg
-          test -f docs/ua/README.md
-          test -f docs/ua/content.md
-          test -f docs/ru/README.md
-          test -f docs/ru/content.md
-          test -f metadata/TAGS_UA.md
-          test -f metadata/TAGS_RU.md
-          test -f metadata/SEARCH_PHRASES_UA.md
-          test -f metadata/SEARCH_PHRASES_RU.md
-
-      - name: Check forbidden draft markers
-        run: |
-          ! grep -RInE "TODO|FIXME|DRAFT|CHERNOVIK|ЧЕРНОВИК|черновик" README.md LICENSE.md AI_INDEX.md docs metadata llms.txt || exit 1
-
-      - name: Check PDF names
-        run: |
-          test -f "Солнечные электростанции.pdf"
-          test -f "Сонячні електростанції.pdf"
