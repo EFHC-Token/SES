@@ -1,0 +1,55 @@
+name: Unpack repository archive
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Unpack ZIP archive
+        run: |
+          ARCHIVE="EFHC_Solar_Books_GitHub_Repository.zip"
+
+          if [ ! -f "$ARCHIVE" ]; then
+            echo "Archive not found: $ARCHIVE"
+            exit 1
+          fi
+
+          mkdir -p _unpacked
+          unzip -o "$ARCHIVE" -d _unpacked
+
+          # Если внутри архива одна верхняя папка — переносим её содержимое в корень.
+          TOP_LEVEL_COUNT=$(find _unpacked -mindepth 1 -maxdepth 1 | wc -l)
+
+          if [ "$TOP_LEVEL_COUNT" -eq 1 ] && [ -d "$(find _unpacked -mindepth 1 -maxdepth 1)" ]; then
+            INNER_DIR="$(find _unpacked -mindepth 1 -maxdepth 1)"
+            cp -R "$INNER_DIR"/. .
+          else
+            cp -R _unpacked/. .
+          fi
+
+          rm -rf _unpacked
+          rm -f "$ARCHIVE"
+
+      - name: Commit unpacked files
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Unpack EFHC solar books repository archive"
+            git push
+          fi
