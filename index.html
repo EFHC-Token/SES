@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    EFHC Solar Books — Солнечные электростанции
+  </title>
+
+  <meta
+    name="description"
+    content="
+    Бесплатные инженерные книги EFHC
+    по солнечной энергетике,
+    солнечным электростанциям,
+    BESS, инверторам,
+    аккумуляторам и photovoltaics.
+    "
+  >
+
+  <meta
+    name="keywords"
+    content="
+    solar energy,
+    solar power,
+    photovoltaics,
+    solar engineering,
+    BESS,
+    renewable energy,
+    EFHC,
+    солнечные электростанции,
+    сонячні електростанції
+    "
+  >
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#07130f;
+      color:#f5f5f5;
+      font-family:
+        Inter,
+        Arial,
+        sans-serif;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1200px,92%);
+      margin:auto;
+    }
+
+    .hero{
+      padding:
+        80px
+        0
+        60px;
+      text-align:center;
+    }
+
+    .logo{
+      width:220px;
+      max-width:90%;
+      margin-bottom:30px;
+    }
+
+    .title{
+      font-size:clamp(
+        2.2rem,
+        6vw,
+        5rem
+      );
+      font-weight:800;
+      line-height:1.1;
+      margin-bottom:24px;
+    }
+
+    .subtitle{
+      font-size:1.2rem;
+      color:#c8d5cf;
+      max-width:900px;
+      margin:
+        0 auto 40px;
+    }
+
+    .badges{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:50px;
+    }
+
+    .badge{
+      background:#0f2a21;
+      border:
+        1px solid
+        #1f4f3f;
+      padding:
+        12px 18px;
+      border-radius:999px;
+      font-size:.95rem;
+      color:#d8fce8;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:18px;
+      margin-bottom:70px;
+    }
+
+    .btn{
+      padding:
+        16px 28px;
+      border-radius:16px;
+      font-weight:700;
+      transition:.2s;
+      display:inline-block;
+    }
+
+    .btn:hover{
+      transform:
+        translateY(-2px);
+    }
+
+    .btn-blue{
+      background:#2563eb;
+      color:white;
+    }
+
+    .btn-green{
+      background:#16a34a;
+      color:white;
+    }
+
+    .btn-dark{
+      background:#111827;
+      color:white;
+      border:
+        1px solid
+        #374151;
+    }
+
+    .section{
+      padding:
+        60px
+        0;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.3rem;
+      margin-bottom:50px;
+      font-weight:800;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(280px,1fr)
+        );
+      gap:24px;
+    }
+
+    .card{
+      background:#0d1d18;
+      border:
+        1px solid
+        #183126;
+      border-radius:24px;
+      padding:28px;
+    }
+
+    .card h3{
+      margin-bottom:18px;
+      font-size:1.4rem;
+    }
+
+    .card ul{
+      padding-left:20px;
+    }
+
+    .card li{
+      margin-bottom:10px;
+      color:#d5dfda;
+    }
+
+    .books{
+      display:grid;
+      grid-template-columns:
+        repeat(
+          auto-fit,
+          minmax(320px,1fr)
+        );
+      gap:30px;
+    }
+
+    .book{
+      background:#0c1915;
+      border:
+        1px solid
+        #1b3a2d;
+      border-radius:30px;
+      padding:36px;
+      text-align:center;
+    }
+
+    .book h3{
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    .book p{
+      color:#c7d2cc;
+      margin-bottom:28px;
+    }
+
+    .footer{
+      padding:
+        80px
+        0
+        40px;
+      text-align:center;
+      color:#9ca3af;
+    }
+
+    .formula{
+      font-size:1.4rem;
+      font-weight:800;
+      color:#facc15;
+      margin:
+        24px
+        0;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container">
+
+      <img
+        src="assets/efhc_logo.svg"
+        alt="EFHC"
+        class="logo"
+      >
+
+      <h1 class="title">
+        EFHC Solar Books
+      </h1>
+
+      <p class="subtitle">
+        Бесплатные инженерные книги
+        по солнечной энергетике,
+        солнечным электростанциям,
+        BESS, photovoltaics,
+        инверторам,
+        аккумуляторам,
+        проектированию,
+        монтажу и экономике СЭС.
+      </p>
+
+      <div class="badges">
+
+        <div class="badge">
+          Solar Energy
+        </div>
+
+        <div class="badge">
+          Renewable Energy
+        </div>
+
+        <div class="badge">
+          BESS
+        </div>
+
+        <div class="badge">
+          Energy Storage
+        </div>
+
+        <div class="badge">
+          Photovoltaics
+        </div>
+
+        <div class="badge">
+          EFHC
+        </div>
+
+      </div>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-blue"
+          href="
+          https://github.com/
+          EFHC-Token/SES/raw/main/
+          %D0%A1%D0%BE%D0%BB%D0%BD%
+          D0%B5%D1%87%D0%BD%D1%8B%D0%
+          B5%20%D1%8D%D0%BB%D0%B5%D0%
+          BA%D1%82%D1%80%D0%BE%D1%81%
+          D1%82%D0%B0%D0%BD%D1%86%D0%
+          B8%D0%B8.pdf
+          "
+        >
+          📥 Скачать RU PDF
+        </a>
+
+        <a
+          class="btn btn-green"
+          href="
+          https://github.com/
+          EFHC-Token/SES/raw/main/
+          %D0%A1%D0%BE%D0%BD%D1%8F%D1%
+          87%D0%BD%D1%96%20%D0%B5%D0%
+          BB%D0%B5%D0%BA%D1%82%D1%80%
+          D0%BE%D1%81%D1%82%D0%B0%D0%
+          BD%D1%86%D1%96%D1%97.pdf
+          "
+        >
+          📥 Завантажити UA PDF
+        </a>
+
+        <a
+          class="btn btn-dark"
+          href="docs/ru/"
+        >
+          📖 Открыть Docs
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title">
+        Что внутри
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>
+            ☀️ Solar Energy
+          </h3>
+
+          <ul>
+            <li>
+              солнечные электростанции
+            </li>
+            <li>
+              генерация
+            </li>
+            <li>
+              photovoltaics
+            </li>
+            <li>
+              renewable energy
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>
+            🔋 BESS & Storage
+          </h3>
+
+          <ul>
+            <li>
+              BESS
+            </li>
+            <li>
+              energy storage
+            </li>
+            <li>
+              натрий-ионные батареи
+            </li>
+            <li>
+              резервное питание
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>
+            ⚡ Engineering
+          </h3>
+
+          <ul>
+            <li>
+              инверторы
+            </li>
+            <li>
+              MPPT
+            </li>
+            <li>
+              стринги
+            </li>
+            <li>
+              кабели и защита
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>
+            📈 Economics
+          </h3>
+
+          <ul>
+            <li>
+              окупаемость
+            </li>
+            <li>
+              CAPEX / OPEX
+            </li>
+            <li>
+              экономика СЭС
+            </li>
+            <li>
+              ROI
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title">
+        Книги EFHC
+      </h2>
+
+      <div class="books">
+
+        <div class="book">
+
+          <h3>
+            🇷🇺
+            Солнечные
+            электростанции
+          </h3>
+
+          <p>
+            Практическое инженерное
+            руководство EFHC
+            по солнечной энергетике.
+          </p>
+
+          <a
+            class="btn btn-blue"
+            href="
+            https://github.com/
+            EFHC-Token/SES/raw/main/
+            %D0%A1%D0%BE%D0%BB%D0%BD%
+            D0%B5%D1%87%D0%BD%D1%8B%D0%
+            B5%20%D1%8D%D0%BB%D0%B5%D0%
+            BA%D1%82%D1%80%D0%BE%D1%81%
+            D1%82%D0%B0%D0%BD%D1%86%D0%
+            B8%D0%B8.pdf
+            "
+          >
+            Скачать PDF
+          </a>
+
+        </div>
+
+        <div class="book">
+
+          <h3>
+            🇺🇦
+            Сонячні
+            електростанції
+          </h3>
+
+          <p>
+            Практичний інженерний
+            посібник EFHC
+            із сонячної енергетики.
+          </p>
+
+          <a
+            class="btn btn-green"
+            href="
+            https://github.com/
+            EFHC-Token/SES/raw/main/
+            %D0%A1%D0%BE%D0%BD%D1%8F%D1%
+            87%D0%BD%D1%96%20%D0%B5%D0%
+            BB%D0%B5%D0%BA%D1%82%D1%80%
+            D0%BE%D1%81%D1%82%D0%B0%D0%
+            BD%D1%86%D1%96%D1%97.pdf
+            "
+          >
+            Завантажити PDF
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title">
+        AI / Search Layer
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>
+            🤖 AI-readable
+          </h3>
+
+          <ul>
+            <li>AI_INDEX.md</li>
+            <li>llms.txt</li>
+            <li>semantic metadata</li>
+            <li>Markdown docs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>
+            🔎 SEO
+          </h3>
+
+          <ul>
+            <li>robots.txt</li>
+            <li>sitemap.xml</li>
+            <li>search phrases</li>
+            <li>semantic tags</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="formula">
+        1 EFHC = 1 кВт·ч
+      </div>
+
+      <div class="formula">
+        1 EFHC = 1 кВт·год
+      </div>
+
+      <p>
+        EFHC — Energy for Humanity Coin
+      </p>
+
+      <p>
+        Practical solar engineering
+        knowledge platform.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
