@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://[USER].github.io/[REPO]/</loc>
+  </url>
+  <url>
+    <loc>https://[USER].github.io/[REPO]/docs/ru/content.md</loc>
+  </url>
+  <url>
+    <loc>https://[USER].github.io/[REPO]/docs/ua/content.md</loc>
+  </url>
+  <url>
+    <loc>https://[USER].github.io/[REPO]/metadata/TAGS_RU.md</loc>
+  </url>
+  <url>
+    <loc>https://[USER].github.io/[REPO]/metadata/TAGS_UA.md</loc>
+  </url>
+</urlset>

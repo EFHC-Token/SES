@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" role="img" aria-labelledby="title desc">
+  <title id="title">EFHC Solar Books Logo</title>
+  <desc id="desc">EFHC logo for free solar power plant documentation.</desc>
+  <rect width="800" height="240" rx="36" fill="#063c2d"/>
+  <circle cx="118" cy="120" r="62" fill="#f4c430"/>
+  <circle cx="118" cy="120" r="38" fill="none" stroke="#063c2d" stroke-width="10"/>
+  <g stroke="#063c2d" stroke-width="8" stroke-linecap="round">
+    <line x1="118" y1="48" x2="118" y2="22"/>
+    <line x1="118" y1="218" x2="118" y2="192"/>
+    <line x1="46" y1="120" x2="20" y2="120"/>
+    <line x1="216" y1="120" x2="190" y2="120"/>
+    <line x1="67" y1="69" x2="48" y2="50"/>
+    <line x1="188" y1="190" x2="169" y2="171"/>
+    <line x1="169" y1="69" x2="188" y2="50"/>
+    <line x1="48" y1="190" x2="67" y2="171"/>
+  </g>
+  <g transform="translate(260 72)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" fill="#ffffff">EFHC</text>
+    <text x="0" y="54" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" fill="#d7f7df">Energy for Humanity Coin</text>
+    <text x="0" y="92" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#f4c430">1 EFHC = 1 кВт·ч / 1 EFHC = 1 кВт·год</text>
+  </g>
+</svg>

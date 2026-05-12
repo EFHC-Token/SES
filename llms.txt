@@ -1,0 +1,27 @@
+# EFHC Solar Books
+
+This repository contains two free practical books about solar power plants:
+
+- Солнечные электростанции
+- Сонячні електростанції
+
+Main formula:
+1 EFHC = 1 кВт·ч
+1 EFHC = 1 кВт·год
+
+Human-readable entry:
+README.md
+
+AI-readable content:
+docs/ru/content.md
+docs/ua/content.md
+
+SEO and keyword metadata:
+metadata/TAGS_RU.md
+metadata/TAGS_UA.md
+metadata/SEARCH_PHRASES_RU.md
+metadata/SEARCH_PHRASES_UA.md
+
+PDF books:
+Солнечные электростанции.pdf
+Сонячні електростанції.pdf
