@@ -8,30 +8,48 @@ permissions:
 
 jobs:
   unpack:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: |
+          echo "Repository root:"
+          pwd
+          echo "Files:"
+          find . -maxdepth 3 -type f | sort
 
       - name: Configure git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Unpack ZIP archive
+      - name: Check archive exists
         run: |
           ARCHIVE="EFHC_Solar_Books_GitHub_Repository.zip"
 
           if [ ! -f "$ARCHIVE" ]; then
-            echo "Archive not found: $ARCHIVE"
+            echo "ERROR: archive not found in repository root:"
+            echo "$ARCHIVE"
+            echo ""
+            echo "Current files:"
+            find . -maxdepth 2 -type f | sort
             exit 1
           fi
+
+          echo "Archive found:"
+          ls -lh "$ARCHIVE"
+          unzip -t "$ARCHIVE"
+
+      - name: Unpack ZIP archive
+        run: |
+          ARCHIVE="EFHC_Solar_Books_GitHub_Repository.zip"
 
           mkdir -p _unpacked
           unzip -o "$ARCHIVE" -d _unpacked
 
-          # Если внутри архива одна верхняя папка — переносим её содержимое в корень.
           TOP_LEVEL_COUNT=$(find _unpacked -mindepth 1 -maxdepth 1 | wc -l)
 
           if [ "$TOP_LEVEL_COUNT" -eq 1 ] && [ -d "$(find _unpacked -mindepth 1 -maxdepth 1)" ]; then
