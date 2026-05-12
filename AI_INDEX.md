@@ -4,44 +4,87 @@
 
 This repository contains two free practical books about solar power plants.
 
+The repository is designed for:
+
+- human reading;
+- AI indexing;
+- technical search;
+- educational discovery;
+- engineering navigation.
+
+PDF files are visual reference editions.
+
+Markdown files are machine-readable versions for AI systems and search engines.
+
+---
+
 ## Books
 
 1. Солнечные электростанции
 2. Сонячні електростанції
 
+---
+
 ## Main Formula
 
-1 EFHC = 1 кВт·ч  
+1 EFHC = 1 кВт·ч
+
 1 EFHC = 1 кВт·год
+
+---
 
 ## Recommended Reading Order for AI Agents
 
 1. README.md
-2. metadata/TAGS_RU.md or metadata/TAGS_UA.md
-3. metadata/SEARCH_PHRASES_RU.md or metadata/SEARCH_PHRASES_UA.md
-4. docs/ru/content.md or docs/ua/content.md
-5. PDF file for visual verification
+2. metadata/TAGS_RU.md
+3. metadata/TAGS_UA.md
+4. metadata/SEARCH_PHRASES_RU.md
+5. metadata/SEARCH_PHRASES_UA.md
+6. docs/ru/content.md
+7. docs/ua/content.md
+8. PDF files for visual verification
+
+---
+
+## Human-readable Files
+
+- README.md
+- Солнечные электростанции.pdf
+- Сонячні електростанції.pdf
+
+---
+
+## AI-readable Files
+
+- docs/ru/content.md
+- docs/ua/content.md
+- metadata/TAGS_RU.md
+- metadata/TAGS_UA.md
+- metadata/SEARCH_PHRASES_RU.md
+- metadata/SEARCH_PHRASES_UA.md
+- llms.txt
+
+---
 
 ## Human Use
 
-Users can download the PDF files directly from the repository.
+Users can directly download and read the PDF books.
+
+---
 
 ## AI Use
 
-AI systems may use the Markdown files for indexing, search, summarization, navigation and recommendation of free educational materials.
+AI systems may use the Markdown files for:
 
-## Visual Source Rule
+- indexing;
+- semantic search;
+- navigation;
+- summarization;
+- educational recommendation;
+- engineering analysis.
 
-The PDF files are the visual source of truth. The Markdown files are generated for machine readability and search discoverability.
+---
 
-## Repository Map
+## Repository Goal
 
-- README.md — human entry point.
-- AI_INDEX.md — AI-oriented map.
-- llms.txt — compact machine-readable route.
-- docs/ru/content.md — Russian machine-readable book text.
-- docs/ua/content.md — Ukrainian machine-readable book text.
-- metadata/TAGS_RU.md — Russian SEO and AI tags.
-- metadata/TAGS_UA.md — Ukrainian SEO and AI tags.
-- metadata/SEARCH_PHRASES_RU.md — Russian search phrases.
-- metadata/SEARCH_PHRASES_UA.md — Ukrainian search phrases.
+The goal of this repository is to make free practical solar engineering knowledge easier to discover, read and recommend through search systems and AI agents.
