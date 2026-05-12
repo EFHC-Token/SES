@@ -19,10 +19,10 @@ EFHC Solar Books
   Бесплатные инженерные книги
   по солнечной энергетике,
   солнечным электростанциям,
-  BESS, photovoltaics,
-  инверторам,
-  аккумуляторам,
-  монтажу и экономике СЭС.
+  photovoltaics,
+  BESS,
+  energy storage
+  и renewable energy.
   "
 >
 
@@ -31,10 +31,10 @@ EFHC Solar Books
   content="
   solar energy,
   photovoltaics,
+  solar power,
   renewable energy,
   BESS,
   energy storage,
-  solar engineering,
   EFHC,
   солнечные электростанции,
   сонячні електростанції
@@ -79,7 +79,7 @@ a{
 }
 
 .container{
-  width:min(1300px,94%);
+  width:min(1320px,94%);
   margin:auto;
 }
 
@@ -88,19 +88,19 @@ a{
   padding:
     0
     0
-    90px;
+    100px;
 }
 
 .logo{
 
   width:100%;
-  max-width:1600px;
+  max-width:1700px;
 
   display:block;
 
   margin:
     0 auto
-    40px;
+    30px;
 
   object-fit:contain;
 }
@@ -109,11 +109,46 @@ a{
   text-align:center;
 }
 
+.covers{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:50px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:70px;
+}
+
+.cover{
+
+  width:min(340px,90vw);
+
+  border-radius:30px;
+
+  box-shadow:
+    0 40px 100px
+    rgba(0,0,0,.45);
+
+  transition:.25s;
+}
+
+.cover:hover{
+
+  transform:
+    translateY(-8px)
+    scale(1.02);
+}
+
 .title{
 
   font-size:
     clamp(
-      2.5rem,
+      2.8rem,
       7vw,
       6rem
     );
@@ -122,7 +157,7 @@ a{
 
   line-height:1.05;
 
-  margin-bottom:26px;
+  margin-bottom:28px;
 }
 
 .subtitle{
@@ -130,7 +165,7 @@ a{
   max-width:1000px;
 
   margin:
-    0 auto 36px;
+    0 auto 40px;
 
   font-size:1.2rem;
 
@@ -154,7 +189,7 @@ a{
 
   border-radius:999px;
 
-  margin-bottom:60px;
+  margin-bottom:70px;
 
   font-weight:800;
 
@@ -173,7 +208,7 @@ a{
       minmax(340px,1fr)
     );
 
-  gap:34px;
+  gap:36px;
 }
 
 .book{
@@ -308,7 +343,7 @@ a{
 
   text-align:center;
 
-  font-size:2.6rem;
+  font-size:2.7rem;
 
   margin-bottom:30px;
 
@@ -393,7 +428,11 @@ a{
   }
 
   .title{
-    font-size:3rem;
+    font-size:3.1rem;
+  }
+
+  .covers{
+    gap:28px;
   }
 
 }
@@ -416,6 +455,22 @@ a{
 
 <div class="hero-content">
 
+<div class="covers">
+
+<img
+  src="assets/ru-book.png"
+  alt="Солнечные электростанции"
+  class="cover"
+>
+
+<img
+  src="assets/ua-book.png"
+  alt="Сонячні електростанції"
+  class="cover"
+>
+
+</div>
+
 <h1 class="title">
 EFHC Solar Books
 </h1>
@@ -425,8 +480,9 @@ EFHC Solar Books
 Бесплатные инженерные книги
 по солнечной энергетике,
 солнечным электростанциям,
-BESS,
 photovoltaics,
+BESS,
+energy storage,
 инверторам,
 аккумуляторам,
 монтажу,
