@@ -22,6 +22,9 @@ metadata/TAGS_UA.md
 metadata/SEARCH_PHRASES_RU.md
 metadata/SEARCH_PHRASES_UA.md
 
+AI navigation:
+AI_INDEX.md
+
 PDF books:
 Солнечные электростанции.pdf
 Сонячні електростанції.pdf
