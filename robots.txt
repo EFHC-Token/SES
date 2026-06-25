@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://EFHC-Token.github.io/SES/sitemap.xml
+Sitemap: https://efhc-token.github.io/SES/sitemap.xml
